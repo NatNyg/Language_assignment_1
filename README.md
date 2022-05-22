@@ -2,7 +2,7 @@
 ## This is the repository for assignment 1 in Language Analytics. 
 
 ### Project Description 
-This script provides a collocation tool which produces a result of a dataframe containing the name of each collocate within a user-defined window-range of a user-defined target word in a user defined text. The dataframe shows how many times each collocate appears in the text (B), number of times each word inside the window accours with the target word (AB) and the MI (information score). The dataframe will be saved as a .csv in the "out" folder.
+This script provides a collocation tool which produces a result of a dataframe containing the name of each collocate within a user-defined window-range of a user-defined target word in a user defined text. The dataframe shows how many times each collocate appears in the text (B), number of times each word inside the window occors with the target word (AB) and the MI (information score). The dataframe will be saved as a .csv in the "out" folder.
 
 ### Method
 
