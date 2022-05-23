@@ -5,6 +5,10 @@
 This script provides a collocation tool which produces a result of a dataframe containing the name of each collocate within a user-defined window-range of a user-defined target word in a user defined text. The dataframe shows how many times each collocate appears in the text (B), number of times each word inside the window occors with the target word (AB) and the MI (information score). The dataframe will be saved as a .csv in the "out" folder.
 
 ### Method
+This script uses an NLP pipeline (the small english model from spacy) to prepare the text for sentiment analysis. After cleaning the text and  normalizing it by turning all words into lower and running the nlp pipeline on the doc of words, I use a function to create a nlp wordlist containing all the words from the text. 
+After this a function creates list of all the collocates of the given targetword within the user-defined span (this function takes the five words before and after the targetword, so it is default set to a span of 10 - if this is changed in the arguments, this function should also be regulated in order to run properly.) b
+Then the MI score is calculated by first finding A (number of times the target word appears in the text), B (how many times each collocate appears in the text) and AB how many times each collocate occors inside the window/span of the target word. I use the math library to calculate this MI-score. I have further included how to handle a ZeroDivisionError, since this occored for me when running the code. 
+Lastly the function uses pandas to save the results into a dataframe containing the collocates, B, AB and MI-score. The dataframe is then saved as a .csv file to the "out" folder. 
 
 ## Repository Structure 
 
